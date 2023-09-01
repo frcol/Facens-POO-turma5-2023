@@ -1,5 +1,5 @@
 
-package aula2.Exercicio2;
+package aula4;
 
 import aula3.Exercicio2.*;
 
@@ -12,7 +12,25 @@ public class Aluno {
     private float ag;
     private float af;
 
-   
+    public Aluno() {
+        
+    }
+    
+    public Aluno(String ra, String nome, float ac1, float ac2, float ag, float af) {
+        this.ra = ra;
+        this.nome = nome;
+        this.ac1 = ac1;
+        this.ac2 = ac2;
+        this.ag = ag;
+        this.af = af;
+    }
+    
+    public Aluno(String ra, String nome) {
+        this.ra = ra;
+        this.nome = nome;
+    }
+
+    
     public String getRa() {
         return ra;
     }
@@ -66,6 +84,10 @@ public class Aluno {
         return (ac1 * 0.15f) + (ac2 * 0.30f) +(ag * 0.10f) +(af * 0.45f);
     }
     
+    public float calculaMedia(float nota1, float nota2) {
+        return (nota1+nota2)/2;
+    }
+    
     public String verificarAprovacao() {
         if (calcularMedia() >= 5) {
             return "Aprovado";
@@ -82,9 +104,9 @@ public class Aluno {
                 +"\nAG: "+this.getAg()
                 +"\nAF: "+this.getAf()
                 +"\n --------------------------"
-                +"\nMédia: "+this.calcularMedia()
+                +"\nMédia: %.2f"
                 +"\nSituação: "+this.verificarAprovacao();
         
-        return result;
+        return String.format(result, this.calcularMedia());
     }
 }
