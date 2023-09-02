@@ -41,4 +41,8 @@ public class Pessoa {
                 "\nCPF: "+getCpf()+
                 "\nCArteira: "+getCarteiraDeMotorista();
     }
+    
+    public String imprimir(String str) {
+        return imprimir()+"\n"+str;
+    }
 }
