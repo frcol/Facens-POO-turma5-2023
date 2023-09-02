@@ -1,12 +1,26 @@
 package aula4.Exemplo1;
 
-import aula2.Exercicio1.*;
+import aula3.Exemplo1.*;
 
 public class Pessoa {
-    private String cpf;
     private String nome;
-    private char sexo;
-    private int idade;
+    private String cpf;
+    private String carteiraDeMotorista;
+
+    public Pessoa(String nome, String cpf, String carteiraDeMotorista) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.carteiraDeMotorista = carteiraDeMotorista;
+    }
+
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public String getCpf() {
         return cpf;
@@ -16,34 +30,21 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getNome() {
-        return nome;
+    public String getCarteiraDeMotorista() {
+        return carteiraDeMotorista;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public char getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setCarteiraDeMotorista(String carteiraDeMotorista) {
+        this.carteiraDeMotorista = carteiraDeMotorista;
     }
     
     public String imprimir() {
-        return "CPF: "+getCpf()+
-                "\nNome: "+getNome()+
-                "\nSexo: "+getSexo()+
-                "\nIdade: "+getIdade();
+        return "Nome: "+getNome()+
+                "\nCPF: "+getCpf()+
+                "\nCArteira: "+getCarteiraDeMotorista();
+    }
+    
+    public String imprimir(String str) {
+        return imprimir()+"\n"+str;
     }
 }
