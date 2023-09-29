@@ -1,4 +1,4 @@
-package aula5;
+package aula5_associacao;
 
 public class Pet {
     private String nome;
