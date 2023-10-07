@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
  */
 public class MainAC1 extends javax.swing.JFrame {
     Veterinario vet = null;
-    
     ArrayList<Veterinario> lstVeterinarios;
     /**
      * Creates new form MainAC1
