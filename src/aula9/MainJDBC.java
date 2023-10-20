@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class MainJDBC {
     public static void main(String[] args) {
         
-
+        Produto prod = new Produto(0, "Computador", 15, 10000);
+        
+        new ProdutoDAO().inserir(prod);
     }
 }
