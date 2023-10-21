@@ -5,7 +5,7 @@
 package aula9.views;
 
 import aula9.utils.TableModelCreator;
-import aula9.dao.ProdutoDAO;
+import aula9.dao.Produto2DAO;
 import aula9.entity.Produto;
 import java.util.List;
 import javax.swing.JTable;
@@ -35,7 +35,7 @@ public class ProdutoView1 extends javax.swing.JFrame {
     
     public void atualizarTabela() {
         try {
-            List<Produto> lstProdutos = new ProdutoDAO().getAll();
+            List<Produto> lstProdutos = new Produto2DAO().getAll();
 
             TableModel tableModelProdutos = TableModelCreator.createTableModel(Produto.class, lstProdutos, null);
             tbProdutos.setModel(tableModelProdutos);
@@ -193,7 +193,7 @@ public class ProdutoView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_tbProdutosMouseClicked
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        new ProdutoDAO().excluir(idSelecionado);
+        new Produto2DAO().excluir(idSelecionado);
         
         atualizarTabela();
         
@@ -209,7 +209,7 @@ public class ProdutoView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        produtoSelecionado = new ProdutoDAO().getByID(idSelecionado);
+        produtoSelecionado = new Produto2DAO().getByID(idSelecionado);
         
         ProdutoCadView1 cad = new ProdutoCadView1(this, true, this);
         cad.setVisible(true);

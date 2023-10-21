@@ -4,7 +4,7 @@
  */
 package aula9.views;
 
-import aula9.dao.ProdutoDAO;
+import aula9.dao.Produto2DAO;
 import aula9.entity.Produto;
 
 /**
@@ -26,7 +26,7 @@ public class ProdutoCadView1 extends javax.swing.JDialog {
         this.main = main;
         
         if (main.getProdutoSelecionado() != null) {
-            isEditar =true;
+            isEditar = true;
             this.prod = main.getProdutoSelecionado();
             popularForm();
         }
@@ -176,12 +176,12 @@ public class ProdutoCadView1 extends javax.swing.JDialog {
         
         if (isEditar) {
             prod = new Produto(prod.getId(), nome, qtde, valor);
-            new ProdutoDAO().editar(prod);
+            new Produto2DAO().editar(prod);
             dispose();
         }
         else {
             prod = new Produto(0, nome, qtde, valor);
-            new ProdutoDAO().inserir(prod); 
+            new Produto2DAO().inserir(prod); 
             resetForm();
         }
     }//GEN-LAST:event_btnCadastrarActionPerformed

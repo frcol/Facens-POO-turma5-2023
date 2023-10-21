@@ -5,7 +5,7 @@
 package aula9.views;
 
 import aula9.utils.TableModelCreator;
-import aula9.dao.ProdutoDAO;
+import aula9.dao.Produto2DAO;
 import aula9.entity.Produto;
 import java.util.List;
 import javax.swing.JOptionPane;

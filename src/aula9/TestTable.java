@@ -4,7 +4,7 @@
  */
 package aula9;
 
-import aula9.dao.ProdutoDAO;
+import aula9.dao.Produto2DAO;
 import aula9.entity.Produto;
 import aula9.utils.TableModelCreator;
 import java.util.List;
@@ -31,7 +31,7 @@ public class TestTable extends javax.swing.JFrame {
 
     public void atualizarComboBox() {
         try {
-            List<Produto> lstProdutos = new ProdutoDAO().getAll();
+            List<Produto> lstProdutos = new Produto2DAO().getAll();
             
             cbProdutos.setModel(new DefaultComboBoxModel<Produto>(
                     lstProdutos.toArray(new Produto[lstProdutos.size()])));
@@ -43,7 +43,7 @@ public class TestTable extends javax.swing.JFrame {
     
     public void autalizaTabela() {
         try {
-            List<Produto> lstProdutos = new ProdutoDAO().getAll();
+            List<Produto> lstProdutos = new Produto2DAO().getAll();
 
             TableModel tableModelProdutos = TableModelCreator.createTableModel(Produto.class, lstProdutos, null);
             tbProdutos.setModel(tableModelProdutos);
