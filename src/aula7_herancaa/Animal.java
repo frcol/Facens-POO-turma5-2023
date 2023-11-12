@@ -1,7 +1,7 @@
 package aula7_herancaa;
 
 
-public class Animal {
+public abstract class Animal {
     private String nome;
     private int idade;
 
@@ -27,9 +27,7 @@ public class Animal {
     }
     
     
-    public void fala() {
-        System.out.println("Falando como ANIMAL comum");
-    }
+    public abstract void fala();
     
     public void movimenta() {
         System.out.println("Andando como ANIMAL comum");

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class MainAnimal {
     public static void main(String[] args) {
+        //Animal animal = new Animal("Xofo", 3);
+        
         Cachorro dog = new Cachorro("Xodo", 6);
                 
         Gato cat = new Gato("Lili", 8);
@@ -21,8 +23,5 @@ public class MainAnimal {
         }
         
         Animal meuAnimal = dog;
-        
-        Animal ani1 = new Animal("Ozzy", 4);
-        Cachorro cao = (Cachorro) ani1;
     }
 }
